@@ -22,6 +22,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by amitshekhar on 27/08/16.
+ * Using CompositeDisposable
  */
 public class DisposableExampleActivity extends AppCompatActivity {
 
@@ -66,26 +67,28 @@ public class DisposableExampleActivity extends AppCompatActivity {
                     public void onComplete() {
                         textView.append(" onComplete");
                         textView.append(AppConstant.LINE_SEPARATOR);
-                        Log.d(TAG, " onComplete");
+                        Log.i(TAG, " onComplete");
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         textView.append(" onError : " + e.getMessage());
                         textView.append(AppConstant.LINE_SEPARATOR);
-                        Log.d(TAG, " onError : " + e.getMessage());
+                        Log.i(TAG, " onError : " + e.getMessage());
                     }
 
                     @Override
                     public void onNext(String value) {
                         textView.append(" onNext : value : " + value);
                         textView.append(AppConstant.LINE_SEPARATOR);
-                        Log.d(TAG, " onNext value : " + value);
+                        Log.i(TAG, " onNext value : " + value);
                     }
                 }));
     }
 
     static Observable<String> sampleObservable() {
+        // defer操作符是直到有订阅者订阅时，才通过Observable的工厂方法创建Observable并执行，
+        // defer操作符能够保证Observable的状态是最新的
         return Observable.defer(new Callable<ObservableSource<? extends String>>() {
             @Override
             public ObservableSource<? extends String> call() throws Exception {

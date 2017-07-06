@@ -37,6 +37,9 @@ import com.rxjava2.android.samples.ui.operators.TimerExampleActivity;
 import com.rxjava2.android.samples.ui.operators.WindowExampleActivity;
 import com.rxjava2.android.samples.ui.operators.ZipExampleActivity;
 
+/**
+ * 学习各种各样的操作符
+ */
 public class OperatorsActivity extends AppCompatActivity {
 
     @Override

@@ -60,21 +60,21 @@ public class FlowableExampleActivity extends AppCompatActivity {
         return new SingleObserver<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                Log.i(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
             public void onSuccess(Integer value) {
                 textView.append(" onSuccess : value : " + value);
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onSuccess : value : " + value);
+                Log.i(TAG, " onSuccess : value : " + value);
             }
 
             @Override
             public void onError(Throwable e) {
                 textView.append(" onError : " + e.getMessage());
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onError : " + e.getMessage());
+                Log.i(TAG, " onError : " + e.getMessage());
             }
         };
     }

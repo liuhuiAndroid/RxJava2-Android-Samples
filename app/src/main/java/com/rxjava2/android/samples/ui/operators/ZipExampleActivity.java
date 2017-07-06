@@ -97,7 +97,7 @@ public class ZipExampleActivity extends AppCompatActivity {
 
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                Log.i(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
@@ -108,21 +108,21 @@ public class ZipExampleActivity extends AppCompatActivity {
                     textView.append(" firstname : " + user.firstname);
                     textView.append(AppConstant.LINE_SEPARATOR);
                 }
-                Log.d(TAG, " onNext : " + userList.size());
+                Log.i(TAG, " onNext : " + userList.size());
             }
 
             @Override
             public void onError(Throwable e) {
                 textView.append(" onError : " + e.getMessage());
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onError : " + e.getMessage());
+                Log.i(TAG, " onError : " + e.getMessage());
             }
 
             @Override
             public void onComplete() {
                 textView.append(" onComplete");
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onComplete");
+                Log.i(TAG, " onComplete");
             }
         };
     }

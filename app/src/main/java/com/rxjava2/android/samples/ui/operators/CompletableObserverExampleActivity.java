@@ -59,21 +59,21 @@ public class CompletableObserverExampleActivity extends AppCompatActivity {
         return new CompletableObserver() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                Log.i(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
             public void onComplete() {
                 textView.append(" onComplete");
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onComplete");
+                Log.i(TAG, " onComplete");
             }
 
             @Override
             public void onError(Throwable e) {
                 textView.append(" onError : " + e.getMessage());
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onError : " + e.getMessage());
+                Log.i(TAG, " onError : " + e.getMessage());
             }
         };
     }

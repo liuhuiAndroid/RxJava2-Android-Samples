@@ -57,14 +57,14 @@ public class LastOperatorExampleActivity extends AppCompatActivity {
 
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                Log.i(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
             public void onSuccess(String value) {
                 textView.append(" onNext : value : " + value);
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onNext value : " + value);
+                Log.i(TAG, " onNext value : " + value);
             }
 
 
@@ -72,7 +72,7 @@ public class LastOperatorExampleActivity extends AppCompatActivity {
             public void onError(Throwable e) {
                 textView.append(" onError : " + e.getMessage());
                 textView.append(AppConstant.LINE_SEPARATOR);
-                Log.d(TAG, " onError : " + e.getMessage());
+                Log.i(TAG, " onError : " + e.getMessage());
             }
         };
     }

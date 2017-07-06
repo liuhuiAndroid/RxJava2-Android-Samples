@@ -136,15 +136,15 @@ public class Utils {
                 // error.getErrorCode() - the ANError code from server
                 // error.getErrorBody() - the ANError body from server
                 // error.getErrorDetail() - just a ANError detail
-                Log.d(TAG, "onError errorCode : " + anError.getErrorCode());
-                Log.d(TAG, "onError errorBody : " + anError.getErrorBody());
-                Log.d(TAG, "onError errorDetail : " + anError.getErrorDetail());
+                Log.i(TAG, "onError errorCode : " + anError.getErrorCode());
+                Log.i(TAG, "onError errorBody : " + anError.getErrorBody());
+                Log.i(TAG, "onError errorDetail : " + anError.getErrorDetail());
             } else {
                 // error.getErrorDetail() : connectionError, parseError, requestCancelledError
-                Log.d(TAG, "onError errorDetail : " + anError.getErrorDetail());
+                Log.i(TAG, "onError errorDetail : " + anError.getErrorDetail());
             }
         } else {
-            Log.d(TAG, "onError errorMessage : " + e.getMessage());
+            Log.i(TAG, "onError errorMessage : " + e.getMessage());
         }
     }
 
