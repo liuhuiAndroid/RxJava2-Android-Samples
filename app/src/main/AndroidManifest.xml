@@ -124,6 +124,9 @@
         <activity android:name=".ui.compose.ComposeOperatorExampleActivity"
             android:label="@string/compose"
             />
+        <activity android:name=".ui.test.TestActivity"
+            android:label="@string/test"
+            />
     </application>
 
 </manifest>

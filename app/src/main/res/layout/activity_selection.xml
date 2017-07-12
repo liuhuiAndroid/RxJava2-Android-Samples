@@ -50,5 +50,12 @@
             android:text="@string/compose"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="test"
+            android:text="@string/test"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
 </ScrollView>
